@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>__FILENAME__ - shared with Dropshare</title>
+    <title>/dropd/ __FILENAME__</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://dropshare.app/assets/css/custom.css"
@@ -21,18 +21,20 @@
       rel="stylesheet"
     />
 
-    <link rel="icon" href="https://dropshare.app/favicon.png" />
-    <meta name="generator" content="Dropshare http://dropshare.app" />
-    <meta property="twitter:card" content="photo" />
-    <meta property="twitter:image" content="__PREVIEWURL__" [^] />
-    <meta property="twitter:title" content="__FILENAME__" />
-    <title>__FILENAME__</title>
-
     <style type="text/css">
       .img-thumbnail {
         border: 0;
         background: 0;
         box-shadow: none;
+      }
+      .dropitbotm {
+        position:absolute;
+        bottom:0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .bg-gradient {
+        background: linear-gradient(to top, #192b27, #08625f) !important;
       }
     </style>
 
@@ -66,47 +68,34 @@
 
   <body>
     <section class="bg-gradient text-white p-0 o-hidden">
-      <div
-        class="container min-vh-100 d-flex flex-column justify-content-top text-center py-4 py-md-5"
-      >
-        <a
-          class="navbar-brand navbar-brand-dynamic-color fade-page color-white"
-          style="color: #fff"
-          href="https://dropshare.app"
-        >
-          <img
-            alt="Dropshare"
-            class="noscrolled"
-            src="https://dropshare.app/assets/img/logos/dropshare-light@3x.png"
-            height="42"
-            width="42"
-          />
-          Dropshare
-        </a>
-        <div class="my-5">
-          <div class="row justify-content-center">
-            <div class="col-12">
-              <h2>__FILENAME__</h2>
-              <div class="lead">
-                <p>__SHAREDATE__</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="container min-vh-100 d-flex flex-column justify-content-top text-center py-4 py-md-5" >
         <div class="row justify-content-center" id="preview-div">
           <div class="col-xl-8 col-lg-9 col-md-10">
             <div
               class="card card-body bg-white flex-row flex-wrap justify-content-around"
             >
-              <div>__PREVIEW__</div>
+              <div>
+                __PREVIEW__
+              </div>
             </div>
           </div>
         </div>
+        <p>__FILENAME__</p>
         <div class="download mt-3">
           <a href="__PATH__" class="btn btn-primary" download="__FILENAME__"
             >Download</a
           ><br />
           <p class="text-muted mt-2">__FILESIZE__</p>
+          
+          <p class="text-muted mt-2">dropd on __SHAREDATE__</p>
+        </div>
+        <div class="dropitbotm">
+          <a
+          style="color: rgba(255, 255, 255, 0.26)"
+          href="https://dropshare.app"
+          >
+          dropd w/ dropshare.app
+          </a>
         </div>
       </div>
     </section>
